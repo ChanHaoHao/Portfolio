@@ -260,6 +260,50 @@ nav .mobile-nav {
 
 }
 
+.education-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.education-grid-section {
+    background-color: #f8f9fa;
+    color: #212529;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    position: relative;
+    margin: 2rem auto;
+    overflow-x: auto; /* makes it scrollable on smaller screens */
+}
+
+.education-grid-section h2{
+    font-size: 34px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.education-grid-section .edu-container {
+    display: column;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.education-grid-section .edu-container .edu-logo {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.education-grid-section .edu-container .edu-logo img {
+    width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
+}
 
 /*SECTION 2: PROJECT GRID */
 .project-grid-section {
@@ -823,11 +867,7 @@ footer p {
         transform: rotate(-45deg);
         bottom: 0;
     } 
-    
-  
 
-    
-      
     /*SECTION 1: Hero */
     .hero-section .group .text h2 {
         flex-direction: column-reverse;
@@ -842,6 +882,11 @@ footer p {
 
     .arrow {
         display: none;
+    }
+
+    .education-grid-section {
+        flex-direction: row;  /* switch to rows on smaller screens */
+        flex-wrap: wrap;      /* allow wrapping if needed */
     }
 
     .project-grid-section .grid-container {
