@@ -477,6 +477,12 @@ nav .mobile-nav {
     font-size: 14px;
 }
 
+.summary .title-header .external-links i {
+    font-size: 3vw;
+    padding: 0 5px;
+    color: var(--text-color);
+}
+
 
 /* SECTION 4: CONTACT */
 .contact-section {

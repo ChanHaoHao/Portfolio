@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -35,15 +35,15 @@
      <!-- _includes/nav.html -->
 <nav>
     <div class="left">
-        <a href="/">Hao-Yu Chan</a>
+        <a href="./index.html">Hao-Yu Chan</a>
     </div>
 
     <!-- Desktop Menu -->
     <div class="right desktop-nav">
-        <a href="/">
+        <a href="./index.html">
             <span>Home</span>
         </a>
-        <a href="/projects/">
+        <a href="#projects">
             <span>Projects</span>
         </a>
         <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -58,13 +58,13 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-nav">
-        <a href="/">
+        <a href="./index.html">
             <span>Home</span>
         </a>
-        <a href="/projects/">
+        <a href="#projects">
             <span>Projects</span>
         </a>
-        <a href="https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <span>Resume</span>
         </a>
     </div>
@@ -158,54 +158,122 @@
 
     <div class="grid-container">
         
-    <a href="/projects/demo-project/index/" class="project-link">
+    <a href="./projects/ArmLab/index.html" class="project-link">
         <div class="project-card">
-            
-            
-            <img src="/_projects/demo-project/project2.jpg" alt="Super Heavy Booster Catch (Demo Only) image">
-            <h3 class="project-title">Super Heavy Booster Catch (Demo Only)</h3>
+            <img src="./assets/images/project-image/ArmLab/ArmLab.png" alt="ArmLab image">
+            <h3 class="project-title">Robotic Systems Lab - ArmLab</h3>
             <div class="project-skills">
-                
-                    <span class="skill">Structural analysis</span>
-                
-                    <span class="skill">Aerodynamic design</span>
-                
-                    <span class="skill">Propulsion system integration</span>
-                
-                    <span class="skill">Control Algorithem</span>
-                
-                    <span class="skill">Welding</span>
-                
-                    <span class="skill">Metal forming</span>
-                
-                    <span class="skill">Thermal simulation</span>
-                
+                    <span class="skill">OpenCV</span>
+                    <span class="skill">ROS2</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">SolidWorks</span>
+                    <span class="skill">System integration</span>
+                    <span class="skill">Forward/Inverse kinematics</span>
+                    <span class="skill">Fast prototyping</span>
+					<span class="skill">Motion control</span>
+					<span class="skill">Trajectory planning</span>
             </div>
-            <p class="project-description">(I have never been employed by / affiliated with SpaceX. This is for demo use only) Developing the Super Heavy booster catch project involves designing a robust launch tower with "chopstick" arms, advanced control systems for precise booster alignment, and integrating sophisticated software for real-time trajectory adjustments and structural engineering to handle immense forces.</p>
+            <p class="project-description">Developed a vision-guided control system for the Interbotix ReactorX-200 robotic arm using an RGB-D camera. The system features automated camera calibration, real-time object detection (size, color, pose), and precise motion control via forward and inverse kinematics. Implemented waypoint-based path planning for efficient object manipulation. Validated through performance in three robotics competitions.</p>
             <button class="read-more">Read more →</button>
         </div>
     </a>
 
     <a href="/projects/sonos-teardown/index/" class="project-link">
         <div class="project-card">
-            
-            
-            <img src="/_projects/sonos-teardown/sonos.png" alt="Sonos Teardown image">
-            <h3 class="project-title">Sonos Teardown</h3>
+            <img src="./assets/images/project-image/BotLab.png" alt="BotLab image">
+            <h3 class="project-title">Robotic Systems Lab - BotLab</h3>
             <div class="project-skills">
-                
-                    <span class="skill">drumel</span>
-                
-                    <span class="skill">microprobing</span>
-                
-                    <span class="skill">Electronics Teardown</span>
-                
-                    <span class="skill">PCB analysis</span>
-                
-                    <span class="skill">audio system design</span>
-                
+                    <span class="skill">PID</span>
+                    <span class="skill">A* path planning</span>
+                    <span class="skill">Motion control</span>
+                    <span class="skill">SLAM</span>
+                    <span class="skill">Sensor fusion</span>
+					<span class="skill">Particle filter</span>
+					<span class="skill">C/C++</span>
+					<span class="skill">Raspberry PI</span>
+					<span class="skill">YOLO</span>
             </div>
-            <p class="project-description">Conducted detailed teardown analysis of Sonos Era speaker, documenting internal components, driver configuration, and PCB design. Created technical documentation with photos and assembly insights for engineering reference.</p>
+            <p class="project-description">This project involved developing a fully autonomous differential-drive robot capable of navigating and mapping unknown environments. We implemented a control and navigation stack featuring PID control, gyrodometry-based odometry, and Pure Pursuit for smooth motion execution. For localization and mapping, we utilized a particle filter-based SLAM system operating in real time with approximately 6000 particles, achieving a localization RMS error of 3.25 cm. A* path planning and frontier exploration enabled the robot to autonomously explore and construct maps, successfully completing two industry-inspired challenges.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+	<a href="/projects/sonos-teardown/index/" class="project-link">
+        <div class="project-card">
+            <img src="/_projects/sonos-teardown/sonos.png" alt="Computer Vision">
+            <h3 class="project-title">Computer Vision</h3>
+            <div class="project-skills">
+                    <span class="skill">Image filtering</span>
+                    <span class="skill">Metric learning model</span>
+                    <span class="skill">Classification model (ResNet)</span>
+                    <span class="skill"></span>
+                    <span class="skill"></span>
+					<span class="skill"></span>
+					<span class="skill"></span>
+					<span class="skill"></span>
+					<span class="skill">Gaussian/Laplacian pyramids</span>
+            </div>
+            <p class="project-description">This project involved developing a fully autonomous differential-drive robot capable of navigating and mapping unknown environments. We implemented a control and navigation stack featuring PID control, gyrodometry-based odometry, and Pure Pursuit for smooth motion execution. For localization and mapping, we utilized a particle filter-based SLAM system operating in real time with approximately 6000 particles, achieving a localization RMS error of 3.25 cm. A* path planning and frontier exploration enabled the robot to autonomously explore and construct maps, successfully completing two industry-inspired challenges.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+	<a href="/projects/sonos-teardown/index/" class="project-link">
+        <div class="project-card">
+            <img src="/_projects/sonos-teardown/sonos.png" alt="3D Reconstruction">
+            <h3 class="project-title">3D Reconstruction</h3>
+            <div class="project-skills">
+                    <span class="skill">PID</span>
+                    <span class="skill">A* path planning</span>
+                    <span class="skill">Motion control</span>
+                    <span class="skill">SLAM</span>
+                    <span class="skill">Sensor fusion</span>
+					<span class="skill">Particle filter</span>
+					<span class="skill">C/C++</span>
+					<span class="skill">Raspberry PI</span>
+					<span class="skill">YOLO</span>
+            </div>
+            <p class="project-description">This project involved developing a fully autonomous differential-drive robot capable of navigating and mapping unknown environments. We implemented a control and navigation stack featuring PID control, gyrodometry-based odometry, and Pure Pursuit for smooth motion execution. For localization and mapping, we utilized a particle filter-based SLAM system operating in real time with approximately 6000 particles, achieving a localization RMS error of 3.25 cm. A* path planning and frontier exploration enabled the robot to autonomously explore and construct maps, successfully completing two industry-inspired challenges.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+	<a href="/projects/sonos-teardown/index/" class="project-link">
+        <div class="project-card">
+            <img src="/_projects/sonos-teardown/sonos.png" alt="System Integration for Autonomous Track Vehicle in Greenhouses">
+            <h3 class="project-title">System Integration for Autonomous Track Vehicle in Greenhouses</h3>
+            <div class="project-skills">
+                    <span class="skill">PID</span>
+                    <span class="skill">A* path planning</span>
+                    <span class="skill">Motion control</span>
+                    <span class="skill">SLAM</span>
+                    <span class="skill">Sensor fusion</span>
+					<span class="skill">Particle filter</span>
+					<span class="skill">C/C++</span>
+					<span class="skill">Raspberry PI</span>
+					<span class="skill">YOLO</span>
+            </div>
+            <p class="project-description">This project involved developing a fully autonomous differential-drive robot capable of navigating and mapping unknown environments. We implemented a control and navigation stack featuring PID control, gyrodometry-based odometry, and Pure Pursuit for smooth motion execution. For localization and mapping, we utilized a particle filter-based SLAM system operating in real time with approximately 6000 particles, achieving a localization RMS error of 3.25 cm. A* path planning and frontier exploration enabled the robot to autonomously explore and construct maps, successfully completing two industry-inspired challenges.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+	<a href="/projects/sonos-teardown/index/" class="project-link">
+        <div class="project-card">
+            <img src="/_projects/sonos-teardown/sonos.png" alt="Companion Healthcare Aid Robot Manager for Caring the Elders">
+            <h3 class="project-title">Companion Healthcare Aid Robot Manager for Caring the Elders</h3>
+            <div class="project-skills">
+                    <span class="skill">PID</span>
+                    <span class="skill">A* path planning</span>
+                    <span class="skill">Motion control</span>
+                    <span class="skill">SLAM</span>
+                    <span class="skill">Sensor fusion</span>
+					<span class="skill">Particle filter</span>
+					<span class="skill">C/C++</span>
+					<span class="skill">Raspberry PI</span>
+					<span class="skill">YOLO</span>
+            </div>
+            <p class="project-description">This project involved developing a fully autonomous differential-drive robot capable of navigating and mapping unknown environments. We implemented a control and navigation stack featuring PID control, gyrodometry-based odometry, and Pure Pursuit for smooth motion execution. For localization and mapping, we utilized a particle filter-based SLAM system operating in real time with approximately 6000 particles, achieving a localization RMS error of 3.25 cm. A* path planning and frontier exploration enabled the robot to autonomously explore and construct maps, successfully completing two industry-inspired challenges.</p>
             <button class="read-more">Read more →</button>
         </div>
     </a>

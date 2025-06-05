@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/syntax.css">
+
+    <script src="/assets/js/script.js"></script>
+    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK6SXX49WX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NK6SXX49WX');
+    </script>
+        <!-- End Google Tag Manager -->
+    
+    <title>Hao-Yu Chan's Portfolio</title>
+    
+
+</head>
+<body>
+    <!-- NAVBAR -->
+     <!-- _includes/nav.html -->
+<nav>
+    <div class="left">
+        <a href="../../index.html">Hao-Yu Chan</a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="right desktop-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+</nav>
+
+    <div class="page"><div class="post-view">
+    <div class="summary">
+        <img src="../../assets/images/project-image/ArmLab/ArmLab.png" alt="ArmLab image">
+        
+        <div class="title-header">
+            <h1>Robotic Systems Lab - ArmLab</h1>
+            <span class="external-links">
+                <a href="https://github.com/ChanHaoHao" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </span>
+        </div>
+        
+        <div class="project-description">
+            <h2>Project Overview</h2>
+            <p>Developed a vision-guided control system for the Interbotix ReactorX-200 robotic arm using an RGB-D camera. The system features automated camera calibration, real-time object detection (size, color, pose), and precise motion control via forward and inverse kinematics. Implemented waypoint-based path planning for efficient object manipulation. Validated through performance in three robotics competitions.</p>
+        </div>
+        <div class="skills-card">
+            <h2>Skills Used</h2> 
+            <div class="skills-list">
+                <span class="skill">OpenCV</span>
+                <span class="skill">ROS2</span>
+                <span class="skill">Python</span>
+                <span class="skill">SolidWorks</span>
+                <span class="skill">System integration</span>
+                <span class="skill">Forward/Inverse kinematics</span>
+                <span class="skill">Fast prototyping</span>
+            </div>
+        </div>
+    </div>
+      
+    <div class="content">
+        <hr />
+<h1 id="header-1">System Initialization and Calibration</h1>
+<p>We began by developing a foundational control system for the Interbotix ReactorX-200 5-DOF robotic arm integrated with an RGB-D camera. This included implementing a teach-and-repeat motion interface, calibrating the camera's intrinsic parameters, and estimating its extrinsic position using manual measurements. These tasks familiarized us with the robot’s hardware and GUI, and laid the groundwork for more precise spatial reasoning and control in future tasks.</p>
+<hr />
+<h1 id="header-2">Vision System Refinement and Forward Kinematics</h1>
+<p>To improve accuracy in visual localization, we replaced manual extrinsic calibration with a method using Apriltags and homography transformations. This allowed us to rectify the camera’s perspective and align it with the robot's working environment. In parallel, we implemented forward kinematics using the Denavit-Hartenberg convention, enabling accurate end-effector pose calculation.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/ArmLab/AprilTagDetection.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/ArmLab/before_homography.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/ArmLab/after_homography.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">The left image shows Apriltag detections on the workspace. The middle image displays the original camera view before applying homography, where the workspace appears trapezoidal. The right image presents the view after the homography transformation, which corrects the perspective and renders the workspace as a proper rectangle.</p>
+<hr />
+<h1 id="header-3">Perception Pipeline and Inverse Kinematics</h1>
+<p>Building on a calibrated workspace, we developed a robust perception pipeline for real-time object detection. By combining depth-based contour detection with HSV-based color filtering, we achieved reliable identification of block shapes, positions, and orientations under varying lighting conditions. We then implemented a custom inverse kinematics solver that could compute joint angles for arbitrary target poses. This enabled a user-friendly "click-and-grab" interface, allowing interactive object selection and automated execution of complex manipulation tasks with smooth, multi-step trajectories.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/ArmLab/rgb_frame_for_contour_detection.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/ArmLab/depth_frame.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/ArmLab/detected_shapes.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">The left image shows the ground truth positions of the blocks on the workspace. The middle image displays block positions detected from the depth frame, where contours are extracted for shape detection. The right image presents the final detection results produced by our full perception pipeline.</p>
+<hr />
+<h1 id="header-4">Competition Tasks and Basketball Launcher</h1>
+<p>Our system was tested through three structured challenges: “Sort ’n Stack,” “Line ’em Up,” and “To the Sky.” These tasks required stacking, aligning, and arranging blocks with increasing complexity. We developed practical strategies to overcome hardware limitations—such as a kick motion to ensure tight block placement and heuristics to manage stacked blocks. Additionally, we engineered a basketball launcher with a spring-powered trigger and height-adjustment system, demonstrating the integration of mechanical and robotic design in a functional prototype.</p>
+<hr />
+<h1 id="header-5">Outcomes and Reflections</h1>
+<p>This project delivered a complete robotics solution involving vision, calibration, planning, and actuation. It highlighted the challenges of real-world robotic deployment, such as sensor misalignment and mechanical constraints, and offered a platform to test and validate solutions under task-oriented constraints. Our work reflects strong system integration skills and the ability to balance algorithmic complexity with practical robustness in a dynamic robotic environment.</p>
+<div></br></div>
+</div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL3LR5QV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+    <footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="../../index.html">
+                <span>Home</span>
+            </a>
+            <a href="../../index.html#projects">
+                <span>Projects</span>
+            </a>
+            <a href=https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing target="_blank" rel="noopener noreferrer">
+                <span>Resume</span>
+            </a>
+        </div>
+    </div>
+    <div class="license">
+        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="mailto:aram.lee12@gmail.com"> Here</a> </span>
+        <p>FreeToEngineer portfolio template © 2025 by Aram Lee is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
+    </div>
+</footer>
+
+</html>
