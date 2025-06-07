@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/syntax.css">
+
+    <script src="/assets/js/script.js"></script>
+    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK6SXX49WX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NK6SXX49WX');
+    </script>
+        <!-- End Google Tag Manager -->
+    
+    <title>Hao-Yu Chan's Portfolio</title>
+    
+
+</head>
+<body>
+    <!-- NAVBAR -->
+     <!-- _includes/nav.html -->
+<nav>
+    <div class="left">
+        <a href="../../index.html">Hao-Yu Chan</a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="right desktop-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+</nav>
+
+    <div class="page"><div class="post-view">
+    <div class="summary">
+        <img src="../../assets/images/project-image/ComputerVision/ComputerVision.png" alt="ArmLab image">
+        
+        <div class="title-header">
+            <h1>Computer Vision</h1>
+            <span class="external-links">
+                <a href="https://github.com/ChanHaoHao" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </span>
+        </div>
+        
+        <div class="project-description">
+            <h2>Project Overview</h2>
+            <p>This coursework covers core concepts and practical implementations in computer vision. Each task involved hands-on development of classical and deep learning techniques for image analysis, recognition, and generation. The projects demonstrate proficiency in image filtering, frequency analysis, homography estimation, panoramic stitching, neural network training, and modern generative models such as diffusion networks.</p>
+        </div>
+        <div class="skills-card">
+            <h2>Skills Used</h2> 
+            <div class="skills-list">
+                    <span class="skill">PID</span>
+                    <span class="skill">Image filtering</span>
+                    <span class="skill">Metric learning model</span>
+                    <span class="skill">Diffusion models</span>
+                    <span class="skill">OpenCV</span>
+                    <span class="skill">Scipy</span>
+                    <span class="skill">SIFT keypoint extraction</span>
+                    <span class="skill">Panorama</span>
+                    <span class="skill">Gaussian/Laplacian pyramids</span>
+                    <span class="skill">PyTorch</span>
+            </div>
+        </div>
+    </div>
+      
+    <div class="content">
+        <hr />
+<h1 id="header-1">Image Filtering</h1>
+<p>This assignment focused on foundational image processing techniques using spatial filters. I implemented gradient, Gaussian, box, and steerable filters from scratch and visualized their effects on real images. Additionally, I explored the impact of filter ordering and conducted quantitative analysis of edge detection errors. Median filtering was also applied to denoise images, with performance measured using mean squared error.</p>
+<hr />
+<h1 id="header-2">Frequency Domain Analysis</h1>
+<p>In this homework, I investigated the use of the 2D Discrete Fourier Transform (DFT) for image analysis. I applied the Convolution Theorem to compare spatial and frequency-domain filtering, constructed Gaussian and Laplacian pyramids, and implemented a multi-level image reconstruction pipeline. The assignment concluded with Laplacian pyramid blending, where I seamlessly combined images using spatial-frequency representations.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/ComputerVision/mango.jpg" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/ComputerVision/pineapple.jpg" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/ComputerVision/ImageBlending.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">I have blended the mango and pineapple together, making the boundary nearly invisible.</p>
+<hr />
+<h1 id="header-3">Recognition and Metric Learning</h1>
+<p>This project involved building and training deep learning models for face recognition. I implemented classification using a pretrained ResNet18, and contrastive metric learning using a memory bank and cosine similarity. I also evaluated models with t-SNE visualization, and reflected on the generalization and robustness of different learning paradigms.</p>
+<hr />
+<h1 id="header-4">Panorama Stitching</h1>
+<p>In this assignment, I developed a complete panoramic image stitching pipeline. The process included keypoint detection using SIFT, descriptor matching with Lowe’s ratio test, and robust homography estimation using RANSAC. I applied perspective warping and image blending to generate seamless panoramic images from multiple overlapping views of real-world scenes.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/ComputerVision/ImageBeforePanomara.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/ComputerVision/ImageAfterPanomara.png" alt="Web image" loading="lazy" />    
+</div>
+<p style="font-size: 15px">I stitched the three images above by detecting the features in each image with SIFT, and find the homography by RANSAC.</p>
+<hr />
+<h1 id="header-5">Diffusion Models</h1>
+<p>This final project explored diffusion models for generative tasks. I implemented forward and reverse sampling processes, visualized noise progression, and built iterative denoising loops using pretrained DeepFloyd models. Tasks included denoising, image inpainting, and guided generation using prompt embeddings and Classifier-Free Guidance (CFG), offering insights into state-of-the-art generative AI. Also</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/ComputerVision/CFGImage.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/ComputerVision/SmallDiffusionIllution.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">On the left are 5 images generated by <strong>Classifier-Free-Guidance (CFG)</strong>, a noise estimate conditioned on a text prompt, and an unconditional noise estimate, improves samples produced by conditional diffusion models. On the right is an optical illusion created by diffusion model. We first denoise an image normally with the prompt <strong>"an oil painting of people around a campfire"</strong>, at the same time, we take our noisy image, flip it upside down, and denoise with the prompt <strong>"an oil painting of an old man"</strong>.</p>
+<div></br></div>
+</div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL3LR5QV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+    <footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="../../index.html">
+                <span>Home</span>
+            </a>
+            <a href="../../index.html#projects">
+                <span>Projects</span>
+            </a>
+            <a href=https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing target="_blank" rel="noopener noreferrer">
+                <span>Resume</span>
+            </a>
+        </div>
+    </div>
+    <div class="license">
+        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="mailto:aram.lee12@gmail.com"> Here</a> </span>
+        <p>FreeToEngineer portfolio template © 2025 by Aram Lee is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
+    </div>
+</footer>
+
+</html>
