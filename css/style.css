@@ -260,6 +260,58 @@ nav .mobile-nav {
 
 }
 
+.work-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.work-grid-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f8f9fa;
+    width: 100%;
+    color: #212529;
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+}
+
+.work-grid-section h2{
+    font-size: 34px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.work-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.work-container .work-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 5px;
+}
+
+.work-container .work-skills .skill {
+    padding: 0 6px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    background-color: var(--light-background-color);
+    color: var(--link-color);
+    white-space: nowrap; 
+}
+
+.work-container .work-content .contents{
+    margin-left: 20px;
+}
+
 .education-section h2 {
     font-size: 36px;
     margin-bottom: 20px;
