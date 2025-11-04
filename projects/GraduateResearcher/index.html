@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/syntax.css">
+
+    <script src="/assets/js/script.js"></script>
+    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK6SXX49WX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NK6SXX49WX');
+    </script>
+        <!-- End Google Tag Manager -->
+    
+    <title>Hao-Yu Chan's Portfolio</title>
+    
+
+</head>
+<body>
+    <!-- NAVBAR -->
+     <!-- _includes/nav.html -->
+<nav>
+    <div class="left">
+        <a href="../../index.html">Hao-Yu Chan</a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="right desktop-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav">
+        <a href="../../index.html">
+            <span>Home</span>
+        </a>
+        <a href="../../index.html#projects">
+            <span>Projects</span>
+        </a>
+        <a href="https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+        </a>
+    </div>
+</nav>
+
+    <div class="page"><div class="post-view">
+    <div class="summary">
+        <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/room0.png" alt="Research Project">
+        
+        <div class="title-header">
+            <h1>Research Project</h1>
+        </div>
+        
+        <div class="project-description">
+            <h2>Project Overview</h2>
+            <p>This is the result of my graduate research project. Utilizing advanced techniques such as Gaussian splatting, 3D reconstruction, and semantic segmentation, I have developed models that achieve state-of-the-art performance in estimating camera poses, and 3D scene reconstruction.</p>
+        </div>
+        <div class="skills-card">
+            <h2>Skills Used</h2> 
+            <div class="skills-list">
+                    <span class="skill">Python</span>
+                    <span class="skill">PyTorch</span>
+                    <span class="skill">Open3D</span>
+                    <span class="skill">Gaussian splat</span>
+                    <span class="skill">3D reconstruction</span>
+                    <span class="skill">Semantic</span>
+                    <span class="skill">VGGT</span>
+                    <span class="skill">G-ICP</span>
+                    <span class="skill">DINOv2</span>
+                    <span class="skill">Replica Dataset</span>
+                    <span class="skill">Scannet Dataset</span>
+                    <span class="skill">Scannetpp Dataset</span>
+            </div>
+        </div>
+    </div>
+      
+    <div class="content">
+        <hr />
+<h1 id="header-1">3D Scene Reconstruction from Long-Term Video via Visual Geometry Grounding Transformer and Generalized ICP</h1>
+<p>Reconstructing a 3D environment from video data is a computationally intensive and time-consuming process. To address this challenge, we propose a streamlined reconstruction pipeline that integrates the Visual Geometry Grounded Transformer (VGGT) with the Generalized Iterative Closest Point (G-ICP) algorithm. </p>
+<p>The VGGT is a transformer-based architecture designed to infer 3D scene geometry and camera poses directly from video frames. By leveraging attention mechanisms, it learns spatial and temporal relationships across multiple views, enabling efficient estimation of depth, camera poses, and dense 3D structure without explicit feature matching.</p>
+<p>However, the camera pose estimates produced by VGGT often exhibit inaccuracies, particularly in long-term or dynamic sequences. To refine these estimates, we incorporate G-ICP, which computes the optimal transformation matrix aligning each newly reconstructed sub-point cloud with the previously accumulated world point cloud. This correction step ensures global consistency and enhances the overall reconstruction accuracy.</p>
+<p>Using the proposed pipeline, the reconstructed scenes achieved an average completion ratio of 85.58% (maximum: 91.69%, minimum: 75.27%) and an Absolute Trajectory Error (ATE) of 0.069 m on average (maximum: 0.158 m, minimum: 0.0284 m) across eight scenes from the Replica Dataset.</p>
+
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/long term tackle compare w GT.png" alt="Web image" loading="lazy" /> 
+</div>
+<p style="font-size: 15px">Ground truth (blue), first sub-pointcloud (Red), second sub-pointcloud (Green), we can clearly see that the camera pose estimation for the second sub-pointcloud from VGGT is inaccurate.</p>
+
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/room0.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/room2.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/office3.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/office4.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">The reconstructed 3D scenes exhibit strong alignment with the ground truth. While minor discrepancies are observed in smaller elements such as decorations and chairs, the structural components—such as walls and other large objects—are reconstructed with high accuracy and spatial consistency.</p>
+
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/camera_trajectory_room0.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/camera_trajectory_room2.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/camera_trajectory_office3.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/VGGT_W_GICP/camera_trajectory_office4.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">The camera poses refined using G-ICP demonstrate strong alignment with the ground truth. In the visualization, the blue trajectory represents the ground truth camera poses, while the red trajectory corresponds to the results produced by our reconstruction pipeline.</p>
+
+<hr />
+
+<h1 id="header-1">A Lightweight Semantic Head Leveraging DINOv2 for Feature Embedding Extraction</h1>
+<p>When constructing a 3D environment, it is often desirable not only to reconstruct the RGB scene but also to understand the semantics of the environment. Semantic understanding enables an agent operating within the scene to recognize and reason about different objects, particularly identifying which objects are interactable. This additional layer of understanding allows the agent to perform more complex, goal-driven tasks based on user instructions.</p>
+<p>DINOv2 is a state-of-the-art self-supervised visual representation model developed by Meta AI, designed to learn robust and general-purpose image embeddings without requiring labeled data. Trained on large-scale visual datasets, DINOv2 produces rich, semantically meaningful feature representations that capture both global structure and fine-grained object details. These embeddings serve as a strong foundation for downstream tasks such as semantic segmentation, object recognition, and scene understanding, making DINOv2 well-suited for enhancing semantic perception in 3D reconstruction pipelines.</p>
+<p>Although VGGT is primarily designed for RGB-based 3D scene reconstruction, VGGT employs DINOv2 as its visual backbone. We can leverage this property to extend VGGT beyond geometry reconstruction. By utilizing the DINOv2 feature representations embedded within VGGT, our approach enables the generation of semantic 3D environments directly from RGB input. This integration allows the system to infer object categories and spatial relationships within the scene, thereby enhancing environmental understanding and supporting downstream tasks such as interaction, navigation, and goal-driven decision-making.</p>
+<p>From objects such as the trash bin, sofa, light switch, TV, plant, and chair, it is evident that the semantic head accurately identifies and segments diverse categories within the scene. The predicted semantic maps achieve a mean Intersection over Union (mIoU) of 0.9 across 2,000 different views, while the output resolution is enhanced by a factor of 4 compared to the baseline configuration.</p>
+
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/HQ_semantic_id000022.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/HQ_semantic_id000512.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/HQ_semantic_id001532.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/HQ_semantic_id001952.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">High-resolution semantic predictions generated by the modified semantic head, which is adapted to produce outputs at higher spatial resolution.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/pred_semantic_id000022.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/pred_semantic_id000512.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/pred_semantic_id001532.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/pred_semantic_id001952.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">Original semantic predictions generated by the semantic head at low resolution.</p>
+<div class="image-gallery" style="--gallery-height: 200px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/gt_semantic_id000022.png" alt="Web image" loading="lazy" /> 
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/gt_semantic_id000512.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/gt_semantic_id001532.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/gt_semantic_id001952.png" alt="Web image" loading="lazy" />
+</div>
+<p style="font-size: 15px">Ground truth</p>
+
+<div class="image-gallery" style="--gallery-height: 100px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/chair_HQ_semantic_id001952.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/chair_pred_semantic_id001952.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/chair_gt_semantic_id001952.png" alt="Web image" loading="lazy" /> 
+</div>
+<p style="font-size: 15px">Focus area on chair, from left to right, high-resolution, predicted, and ground truth.</p>
+
+<div class="image-gallery" style="--gallery-height: 100px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/plant_HQ_semantic_id001952.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/plant_pred_semantic_id001952.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/plant_gt_semantic_id001952.png" alt="Web image" loading="lazy" /> 
+</div>
+<p style="font-size: 15px">Focus area on plant, from left to right, high-resolution, predicted, and ground truth.</p>
+
+<div class="image-gallery" style="--gallery-height: 100px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/trash_bin_HQ_semantic_id000022.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/trash_bin_pred_semantic_id000022.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/trash_bin_gt_semantic_id000022.png" alt="Web image" loading="lazy" /> 
+</div>
+<p style="font-size: 15px">Focus area on trash bin, from left to right, high-resolution, predicted, and ground truth.</p>
+
+<div class="image-gallery" style="--gallery-height: 100px;">
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/switch_HQ_semantic_id000022.png" alt="Web image" loading="lazy" />    
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/switch_pred_semantic_id000022.png" alt="Web image" loading="lazy" />
+    <img src="../../assets/images/project-image/GraduateResearcher/SemanticHead/Focus_area/switch_gt_semantic_id000022.png" alt="Web image" loading="lazy" /> 
+</div>
+<p style="font-size: 15px">Focus area on switch, from left to right, high-resolution, predicted, and ground truth.</p>
+
+<div></br></div>
+</div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL3LR5QV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+    <footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="../../index.html">
+                <span>Home</span>
+            </a>
+            <a href="../../index.html#projects">
+                <span>Projects</span>
+            </a>
+            <a href=https://drive.google.com/file/d/11pgtXnIpYX-4J0UnDVH8iClthl-vGAJc/view?usp=sharing target="_blank" rel="noopener noreferrer">
+                <span>Resume</span>
+            </a>
+        </div>
+    </div>
+    <div class="license">
+        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="mailto:aram.lee12@gmail.com"> Here</a> </span>
+        <p>FreeToEngineer portfolio template © 2025 by Aram Lee is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
+    </div>
+</footer>
+
+</html>

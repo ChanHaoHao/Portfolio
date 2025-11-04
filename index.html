@@ -131,6 +131,31 @@
   <div class="work-grid-section">
     <div class="work-container">
       <div class="work-text">
+        <h2>Hybrid Dynamic Robotics Lab</h2>
+        <p class="work-dates"><em>January 2025 - Present</em></p>
+        <p class="work-position">Graduate Research Assistant</p>
+      </div>
+      <div class="work-skills">
+              <span class="skill">Python</span>
+              <span class="skill">PyTorch</span>
+              <span class="skill">Open3D</span>
+              <span class="skill">Gaussian splat</span>
+              <span class="skill">3D reconstruction</span>
+              <span class="skill">Semantic</span>
+              <span class="skill">VGGT</span>
+              <span class="skill">G-ICP</span>
+              <span class="skill">DINO</span>
+      </div>
+      <div class="work-content">
+        <ul class="contents">
+          <li>Developed a 3D reconstruction pipeline combining VGGT and GICP for long-term video sequences, achieving an average of 11× lower reconstruction error compared to Monocular Gaussian Splatting SLAM.</li>
+          <li>Achieved 0.9 mIoU with DINO features and implemented a semantic head in PyTorch using only RGB input on Scannetpp dataset</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="work-container">
+      <div class="work-text">
         <h2>FII, USA</h2>
         <p class="work-dates"><em>May 2025 - Present</em></p>
         <p class="work-position">Automation Intern</p>
@@ -156,25 +181,6 @@
       </div>
     </div>
 
-    <!-- <div class="work-container">
-      <div class="work-text">
-        <h2>Hybrid Dynamic Robotics Lab</h2>
-        <p class="work-dates"><em>January 2025 - Present</em></p>
-        <p class="work-position">Graduate Research Assistant</p>
-      </div>
-      <div class="work-skills">
-              <span class="skill">Gaussian splat</span>
-              <span class="skill">3D reconstruction</span>
-              <span class="skill">Semantic</span>
-              <span class="skill">Habitat 2.0</span>
-      </div>
-      <div class="work-content">
-        <h3><strong>Topic: </strong></h3>
-        <ul class="contents">
-        </ul>
-      </div>
-    </div> -->
-
     <div class="work-container">
       <div class="work-text">
         <h2>Center for Artificial Intelligence and Advanced Robotics</h2>
@@ -192,7 +198,7 @@
       <div class="work-content">
         <h3><strong>Topic: Companion Healthcare Aid Robot Manager for Caring the Elders (CHARM)</strong></h3>
         <ul class="contents">
-          <li>Developed Android Apps for Human-Robot Interaction researches, improved System Usability Scale (SUS) from 58.3 to 79.6.</li>
+          <li>Tested and validated new robot behaviors through Android-based HRI applications, collecting 100+ user feedback entries and improving system usability scale (SUS) to a score of 79.6.</li>
           <li>Created an interactive introduction script to familiarize users with the robot, and enhance user engagement.</li>
           <li>Implemented face recognition login and enabled the robot to initiate friendly small talk when a user is detected.</li>
           <li>Designed APIs to support development of Android and Web applications, patient management systems.</li>
@@ -221,10 +227,10 @@
         <h3><strong>Topic: System Integration for Autonomous Track Vehicle in Greenhouses</strong></h3>
         <ul class="contents">
           <li>Developed the control and tele-op systems on the vehicle using Nvidia Tx2 and TI F28388D.</li>
-          <li>Integrated and calibrated LiDARS and RGB-D cameras for RGB-SLAM.</li>
-          <li>Executed EKF for SLAM localization, reduced corridor trap incidents and improved localization error to 0.1m.</li>
-          <li>Designed a vehicle-mounted robotic arm for crop height detection, incorporating bearings to stabilize the motor shaft and prevent shifting.</li>
-          <li>Designed and built the vehicle’s electrical circuit for reliable power distribution and component integration.</li>
+          <li>Developed an EKF-based localization framework fusing IMU, encoder, and LiDAR odometry data, achieving 0.1 m navigation accuracy and eliminated corridor trap incidents in greenhouse environments.</li>
+          <li>Designed control system on a MCU with Ethernet communication to an embedded system for autonomous vehicle.</li>
+          <li>Designed and fabricated a motor mount with a dual-bearing support system for a 1.5 m robotic arm, ensuring year-long operation in high-humidity, high-temperature greenhouse environments.</li>
+          <li>Enhanced reliable path retracing via SLAM and online slip-ratio estimation for variable terrain conditions.</li>
         </ul>
       </div>
     </div>
@@ -324,6 +330,28 @@
                     <span class="skill">PyTorch</span>
             </div>
             <p class="project-description">This coursework covers core concepts and practical implementations in computer vision. Each task involved hands-on development of classical and deep learning techniques for image analysis, recognition, and generation. The projects demonstrate proficiency in image filtering, frequency analysis, homography estimation, panoramic stitching, neural network training, and modern generative models such as diffusion networks.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+    <a href="./projects/GraduateResearcher/index.html" class="project-link">
+        <div class="project-card">
+            <img src="./assets/images/project-image/GraduateResearcher/VGGT_W_GICP/room0.png" alt="Research Project">
+            <h3 class="project-title">Research Project</h3>
+            <div class="project-skills">
+                    <span class="skill">Python</span>
+                    <span class="skill">PyTorch</span>
+                    <span class="skill">Gaussian splat</span>
+                    <span class="skill">3D reconstruction</span>
+                    <span class="skill">Semantic</span>
+                    <span class="skill">VGGT</span>
+                    <span class="skill">G-ICP</span>
+                    <span class="skill">DINOv2</span>
+                    <span class="skill">Replica Dataset</span>
+                    <span class="skill">Scannet Dataset</span>
+                    <span class="skill">Scannetpp Dataset</span>
+            </div>
+            <p class="project-description">This is the result of my graduate research project. Utilizing advanced techniques such as Gaussian splatting, 3D reconstruction, and semantic segmentation, I have developed models that achieve state-of-the-art performance in estimating camera poses, and 3D scene reconstruction.</p>
             <button class="read-more">Read more →</button>
         </div>
     </a>
